@@ -1,4 +1,3 @@
-brew install obsidian
 brew install fzf
 brew install zsh-syntax-highlighting
 brew install firefox

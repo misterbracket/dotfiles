@@ -7,8 +7,14 @@
 ```
 git clone <this-repo>
 cd <this-repo>
+./install/install-deps-macos.sh
+./install/install-deps.sh
 ./install/bootstrap.sh
 ```
+
+## To Do
+[] Add Terminal and zshrc config to repo
+[] Explore Git Submodules
 
 ## Local ZSH Config
 
