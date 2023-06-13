@@ -35,30 +35,34 @@ export EDITOR=nvim
 export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
 
 
-# Old Config to clean up
+# P10K CONFIG
+#
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+#
+#
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+#
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+
+# Load Starship
+eval "$(starship init zsh)"
+
+# Old Config to clean up
 
 
 export ZSH="$HOME/.oh-my-zsh"
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
 source $ZSH/oh-my-zsh.sh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 export PATH=$PATH:/Users/maximilian.klammer/myCode/pleo/terraform/bin
 
 PATH=$(pyenv root)/shims:$PATH 
 if [ -f '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc'; fi
-
 if [ -f '/Users/maximilian.klammer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true

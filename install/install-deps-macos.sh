@@ -8,6 +8,7 @@ brew install docker-compose
 brew install tree
 brew install jq
 brew install bat
+brew install starship
 
 
 brew install exa
