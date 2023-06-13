@@ -9,7 +9,6 @@ source_if_exists $DOTFILES/zsh/history.zsh
 source_if_exists $DOTFILES/zsh/git.zsh
 source_if_exists ~/.fzf.zsh
 source_if_exists $DOTFILES/zsh/aliases.zsh
-# source_if_exists $HOME/.asdf/asdf.sh
 source_if_exists /usr/local/etc/profile.d/z.sh
 source_if_exists /opt/homebrew/etc/profile.d/z.sh
 
@@ -35,21 +34,38 @@ export VISUAL=nvim
 export EDITOR=nvim
 export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
 
-eval "$(starship init zsh)"
 
-# VIM MODE (http://dougblack.io/words/zsh-vi-mode.html) -----------------------
-# bindkey -v
-bindkey '^?' backward-delete-char
+# Old Config to clean up
 
-# function zle-line-init zle-keymap-select {
-#     VIM_PROMPT="%{$fg[yellow]%}[% NORMAL]% %{$reset_color%}"
-#     RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}"
-#     zle reset-prompt
-# }
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# zle -N zle-line-init
-# zle -N zle-keymap-select
-# export KEYTIMEOUT=1
-# END VIM MODE ----------------------------------------------------------------
 
-#eval "$(lua ~/bin/z.lua --init zsh)"
+export ZSH="$HOME/.oh-my-zsh"
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+export PATH=$PATH:/Users/maximilian.klammer/myCode/pleo/terraform/bin
+
+PATH=$(pyenv root)/shims:$PATH 
+if [ -f '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc'; fi
+
+if [ -f '/Users/maximilian.klammer/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
+export PNPM_HOME="/Users/maximilian.klammer/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac

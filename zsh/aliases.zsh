@@ -1,7 +1,15 @@
 # ALIASES ---------------------------------------------------------------------
 alias ta='tmux attach -t'
 alias tn='tmux new'
+alias ll="ls -larth"
 
+alias cat='bat'
+
+alias staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
+alias data-staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-data-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
+alias production="ssocred production && export AWS_PROFILE=production && kubectx eks-production && export VAULT_ADDR=http://vault.k8s-product.vault.production.internal"
+alias data-production="ssocred production && export AWS_PROFILE=production && kubectx eks-data-production && export VAULT_ADDR=http://vault.k8s-product.vault.production.internal"
+alias cicd="ssocred cicd && export AWS_PROFILE=cicd && kubectx eks-cicd"
 
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
