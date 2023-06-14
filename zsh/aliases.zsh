@@ -11,6 +11,8 @@ alias production="ssocred production && export AWS_PROFILE=production && kubectx
 alias data-production="ssocred production && export AWS_PROFILE=production && kubectx eks-data-production && export VAULT_ADDR=http://vault.k8s-product.vault.production.internal"
 alias cicd="ssocred cicd && export AWS_PROFILE=cicd && kubectx eks-cicd"
 
+alias ba="bat $DOTFILES/zsh/aliases.zsh" 
+
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
 alias gco='git checkout'
