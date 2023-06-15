@@ -54,3 +54,11 @@ alias gnext='git log --ancestry-path --format=%H ${commit}..master | tail -1 | x
 alias gprev='git checkout HEAD^'
 
 # FUNCTIONS -------------------------------------------------------------------
+
+take() {
+  mkdir -p $1
+  cd $1
+}
+
+
+
