@@ -5,6 +5,7 @@
 [core]
 	editor = nvim
   pager = delta
+	excludesfile = /Users/maximilian.klammer/.gitignore
 
 [init]
 	defaultBranch = main
