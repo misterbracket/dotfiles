@@ -13,6 +13,8 @@ alias cicd="ssocred cicd && export AWS_PROFILE=cicd && kubectx eks-cicd"
 
 alias ba="bat $DOTFILES/zsh/aliases.zsh" 
 
+alias rc="$DOTFILES/install/bootstrap.sh" 
+
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
 alias gco='git checkout'
