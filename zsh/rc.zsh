@@ -52,19 +52,25 @@ export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scri
 # Load Starship
 eval "$(starship init zsh)"
 
-# Old Config to clean up
 
 
+##########################
+# Old Config to clean up #
+##########################
+
+# Oh My Zsh
 export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 source $ZSH/oh-my-zsh.sh
 
 # Needs to be loaded toward the end
 source_if_exists ~/.fzf.zsh
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
 export PATH=$PATH:/Users/maximilian.klammer/myCode/pleo/terraform/bin
-
 
 PATH=$(pyenv root)/shims:$PATH 
 if [ -f '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc'; fi
