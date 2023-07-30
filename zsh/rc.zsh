@@ -8,6 +8,7 @@ source_if_exists $HOME/.env.sh
 source_if_exists $DOTFILES/zsh/history.zsh
 source_if_exists $DOTFILES/zsh/git.zsh
 source_if_exists $DOTFILES/zsh/aliases.zsh
+source_if_exists $DOTFILES/zsh/nvim_config_switcher.zsh
 source_if_exists /usr/local/etc/profile.d/z.sh
 source_if_exists /opt/homebrew/etc/profile.d/z.sh
 
@@ -34,19 +35,6 @@ precmd() {
 export VISUAL=nvim
 export EDITOR=nvim
 export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
-
-
-# P10K CONFIG
-#
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-#
-#
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-# source ~/powerlevel10k/powerlevel10k.zsh-theme
-#
-# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 # Load Starship

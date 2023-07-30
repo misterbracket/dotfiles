@@ -20,6 +20,8 @@ brew install git
 
 brew install exa
 brew install z
+brew install ag
+brew install gsed
 
 brew install whatsapp
 
