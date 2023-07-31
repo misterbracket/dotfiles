@@ -19,7 +19,6 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
 
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
-
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
 }
