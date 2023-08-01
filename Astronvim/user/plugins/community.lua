@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.kotlin" },
 
   { import = "astrocommunity.motion.harpoon" },
 

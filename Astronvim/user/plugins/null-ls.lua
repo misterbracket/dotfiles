@@ -8,12 +8,6 @@ return {
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
     -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
     config.sources = {
-      -- null_ls.builtins.diagnostics.cspell.with {
-      --   extra_args = { "--config", "~/.cspell.json" },
-      -- },
-      -- null_ls.builtins.code_actions.cspell.with {
-      --   extra_args = { "--config", "~/.cspell.json" },
-      -- },
       null_ls.builtins.formatting.stylua,
     }
     -- set null-ls timeout
