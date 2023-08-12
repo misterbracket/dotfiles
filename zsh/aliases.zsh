@@ -1,7 +1,9 @@
 # ALIASES ---------------------------------------------------------------------
 alias ta='tmux attach -t'
 alias tn='tmux new'
-alias ll="ls -larth"
+alias ll="exa -lar"
+alias la="exa -a"
+alias l="exa -l"
 
 alias cat='bat'
 
