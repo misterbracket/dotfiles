@@ -21,7 +21,14 @@ brew install git
 brew install exa
 brew install z
 brew install ag
-brew install gsed
+brew install sd # sed replacement
+brew install fd # find replacement
+brew install dust # du replacement
+brew install dog # dig replacement
+brew install xh # curl replacement
+brew install ncdu # du replacement
+brew install duf # df replacement
+
 
 brew install whatsapp
 
