@@ -37,5 +37,6 @@ brew install lazygit
 brew install git-delta
 
 brew install tmux
+brew install zellij
 brew install rust
 

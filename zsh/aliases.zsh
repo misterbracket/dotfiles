@@ -1,9 +1,21 @@
 # ALIASES ---------------------------------------------------------------------
+
+# TMUX
 alias ta='tmux attach -t'
 alias tn='tmux new'
-alias ll="exa -lar"
+
+# Zellij
+alias zel="zellij"
+alias zela="zellij a"
+
+# Directory Navigation
+alias ..="cd .."
 alias la="exa -a"
 alias l="exa -l"
+alias ll="exa -lar"
+
+# NVIM
+alias v='nvim-astro'
 
 alias cat='bat'
 
