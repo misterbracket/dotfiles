@@ -14,6 +14,7 @@ return {
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.kotlin" },
+  { import = "astrocommunity.pack.astro" },
 
   { import = "astrocommunity.motion.harpoon" },
 

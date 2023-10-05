@@ -28,6 +28,7 @@ brew install dog # dig replacement
 brew install xh # curl replacement
 brew install ncdu # du replacement
 brew install duf # df replacement
+brew install parallel 
 
 
 brew install whatsapp
