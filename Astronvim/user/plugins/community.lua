@@ -13,12 +13,11 @@ return {
   { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.kotlin" },
-  { import = "astrocommunity.pack.astro" },
 
   { import = "astrocommunity.motion.harpoon" },
 
-  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  -- { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.colorscheme.catppuccin" },
 
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },

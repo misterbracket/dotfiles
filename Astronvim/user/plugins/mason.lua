@@ -13,8 +13,8 @@ return {
         "jsonls",
         "bashls",
         "yamlls",
-        "kotlin_language_server",
-        -- "cspell",
+        "gopls"
+        "cspell",
       },
     },
   },
