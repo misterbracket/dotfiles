@@ -77,4 +77,7 @@ take() {
 }
 
 
-
+vmrss() {
+    p=$1
+    while true; do sync; ps -o rss= -p $1 | awk '{print $1/1024 " MB"}'; sleep 1; done
+}
