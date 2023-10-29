@@ -15,7 +15,7 @@ alias l="exa -l"
 alias ll="exa -lar"
 
 # NVIM
-alias v='nvim-astro'
+alias v='nvim-lazy'
 
 # alias cat='bat'
 
