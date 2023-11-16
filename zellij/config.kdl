@@ -90,7 +90,7 @@ keybinds clear-defaults=true {
 		bind "o" { SearchToggleOption "WholeWord"; }
 	}
 	entersearch {
-		bind "Ctrl s" "Esc" { SwitchToMode "Scroll"; }
+		bind "Ctrl f" "Esc" { SwitchToMode "Scroll"; }
 		bind "Enter" { SwitchToMode "Search"; }
 	}
 	renametab {
