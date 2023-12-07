@@ -1,2 +1,1 @@
 $DOTFILES/tmux/tmux.conf=$HOME/.config/tmux/tmux.conf
-$DOTFILES/tmux/tmux.conf.local=$HOME/.config/tmux/tmux.conf.local
