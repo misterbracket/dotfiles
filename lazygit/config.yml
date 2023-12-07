@@ -1,4 +1,4 @@
-git:
+gderit:
   paging:
     colorArg: always
     pager: delta --dark --paging=never

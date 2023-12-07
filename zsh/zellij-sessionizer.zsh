@@ -1,4 +1,4 @@
-function sessionizer() {
+function zellij-sessionizer() {
   SESSION_CWD=$(fd . ~/myCode --maxdepth 2 --type directory | fzf --print-query | tail -1)
   SESSION_NAME=$(basename $SESSION_CWD | tr . _)
 
@@ -23,4 +23,4 @@ function sessionizer() {
   	--default-cwd "$SESSION_CWD"
 }
 
-bindkey -s ^f "sessionizer\n"
+bindkey -s ^f "zellij-sessionizer\n"
