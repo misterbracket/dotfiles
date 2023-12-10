@@ -22,3 +22,5 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-au
 #Zsh Autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
+#TPM
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/t
