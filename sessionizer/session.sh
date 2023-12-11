@@ -4,8 +4,13 @@
 #and it is a proper shell script that uses bash
 
 SESSION_CWD=$(fd . ~/myCode --maxdepth 2 --type directory | fzf-tmux --print-query | tail -1)
-SESSION_NAME=$(basename $SESSION_CWD | tr . _)
 
+if [ -z $SESSION_CWD]; then
+	echo "No directory selected"
+	exit 1
+fi
+
+SESSION_NAME=$(basename $SESSION_CWD | tr . _)
 DIRECTORY_EXISTS=$(fd . ~/myCode --maxdepth 2 --type directory | grep -c "$SESSION_CWD")
 
 if [ $DIRECTORY_EXISTS -eq 0 ]; then
