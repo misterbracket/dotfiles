@@ -5,7 +5,7 @@
 
 SESSION_CWD=$(fd . ~/myCode --maxdepth 2 --type directory | fzf-tmux --print-query | tail -1)
 
-if [ -z $SESSION_CWD]; then
+if [ -z $SESSION_CWD ]; then
 	echo "No directory selected"
 	exit 1
 fi

@@ -1,4 +1,4 @@
-../brew/install.sh 
+../brew/install.sh
 
 brew install fzf
 $(brew --prefix)/opt/fzf/install --bin
@@ -12,24 +12,22 @@ brew install jq
 brew install bat
 brew install starship
 
-#used by asdf 
-brew install coreutils 
-brew install curl 
+#used by asdf
+brew install coreutils
+brew install curl
 brew install git
-
 
 brew install exa
 brew install z
 brew install ag
-brew install sd # sed replacement
-brew install fd # find replacement
+brew install sd   # sed replacement
+brew install fd   # find replacement
 brew install dust # du replacement
-brew install dog # dig replacement
-brew install xh # curl replacement
+brew install dog  # dig replacement
+brew install xh   # curl replacement
 brew install ncdu # du replacement
-brew install duf # df replacement
-brew install parallel 
-
+brew install duf  # df replacement
+brew install parallel
 
 brew install whatsapp
 
@@ -39,7 +37,6 @@ brew install git-delta
 
 brew install tmux
 brew install zellij
+brew install alacritty
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-
