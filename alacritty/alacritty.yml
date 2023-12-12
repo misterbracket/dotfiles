@@ -34,7 +34,7 @@ font:
   italic:
     family: MesloLGS NF
     style: Italic
-  size: 17.0
+  size: 16.0
   offset:
     x: 0
     y: 0
@@ -43,6 +43,9 @@ font:
     y: 0
 
 draw_bold_text_with_bright_colors: false
+
+key_bindings:
+  - { key: F, mods: Command, action: ToggleFullscreen }
 
 # TokyoNight Alacritty Colors
 colors:
