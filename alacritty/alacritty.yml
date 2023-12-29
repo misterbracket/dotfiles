@@ -44,8 +44,13 @@ font:
 
 draw_bold_text_with_bright_colors: false
 
+# TMUX Bindings inspired by https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux/
 key_bindings:
   - { key: F, mods: Command, action: ToggleFullscreen }
+  - { key: T, mods: Command, chars: "\x02\x63" } # create a new tmux tab
+  - { key: W, mods: Command, chars: "\x02x" } # kill the current pane
+  - { key: Tab, mods: Control, chars: "\x02n" } # switch to next tmux window
+  - { key: Grave, mods: Control, chars: "\x02p" } # switch to previous tmux window
 
 # TokyoNight Alacritty Colors
 colors:
