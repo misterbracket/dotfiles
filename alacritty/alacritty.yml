@@ -51,6 +51,7 @@ key_bindings:
   - { key: W, mods: Command, chars: "\x02x" } # kill the current pane
   - { key: Tab, mods: Control, chars: "\x02n" } # switch to next tmux window
   - { key: Grave, mods: Control, chars: "\x02p" } # switch to previous tmux window
+  - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" } # save vim buffer
 
 # TokyoNight Alacritty Colors
 colors:
