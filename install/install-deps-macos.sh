@@ -18,7 +18,8 @@ brew install curl
 brew install git
 
 brew install exa
-brew install z
+# brew install z
+brew install zoxide
 brew install ag
 brew install sd   # sed replacement
 brew install fd   # find replacement

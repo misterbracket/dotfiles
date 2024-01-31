@@ -48,6 +48,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # ZSH Syntax Highlighting
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh  
 
+#Load Zoxide
+eval "$(zoxide init zsh)"
+
 # Needs to be loaded toward the end
 source_if_exists ~/.fzf.zsh
 

@@ -1,8 +1,4 @@
--- add more treesitter parsers
--- add more treesitter parsers
-return
--- add more treesitter parsers
-{
+return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
     ensure_installed = {

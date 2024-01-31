@@ -9,7 +9,7 @@ alias zel="zellij"
 alias zela="zellij a"
 
 # Directory Navigation
-alias ..="cd .."
+# alias ..="cd .."
 alias la="exa -a"
 alias l="exa -l"
 alias ll="exa -lar"
@@ -17,7 +17,7 @@ alias ll="exa -lar"
 # NVIM
 alias v='nvim-lazy'
 
-# alias cat='bat'
+alias cat='bat'
 
 alias staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
 alias data-staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-data-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
