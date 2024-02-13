@@ -1,0 +1,5 @@
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set NERDTree
