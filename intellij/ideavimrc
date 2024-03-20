@@ -1,5 +1,35 @@
 let mapleader=" "
 
+set clipboard+=unnamed
+set number relativenumber
+
+"""Key Mappings --------------------------  """
+nmap <S-h> <action>(PreviousTab)
+nmap <S-l> <action>(NextTab)
+nmap <leader>bd <action>(CloseEditor)
+"nmap <leader>m <action>(Git.Menu)
+nmap <leader>s <action>(QuickChangeScheme)
+nmap <leader>cd <action>(ShowErrorDescription)
+nmap <leader>ca <action>(ShowIntentionActions)
+nmap gr <action>(FindUsages)
+nmap <leader>r <action>(Run)
+nmap [e <action>(GotoNextError)
+
+inoremap jj <Esc>
+
 """ Plugins  --------------------------------
 set surround
 set NERDTree
+set visualbell
+set noerrorbells
+set commentary
+set quickscope
+"""set which-key
+
+" disable the timeout option
+set notimeout
+
+" increase the timeoutlen (default: 1000), don't add space around the equal sign
+set timeoutlen=5000
+
+

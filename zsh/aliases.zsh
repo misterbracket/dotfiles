@@ -5,29 +5,27 @@ alias ta='tmux attach -t'
 alias tn='tmux new'
 
 # Zellij
-alias zel="zellij"
-alias zela="zellij a"
+alias zel='zellij'
+alias zela='zellij a'
 
 # Directory Navigation
-# alias ..="cd .."
-alias la="exa -a"
-alias l="exa -l"
-alias ll="exa -lar"
+# alias ..='cd ..'
+alias la='lsd -a'
+alias l='lsd -l'
+alias ll='lsd -lar'
 
 # NVIM
 alias v='nvim-lazy'
 
 alias cat='bat'
 
-alias staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
-alias data-staging="ssocred staging && export AWS_PROFILE=staging && kubectx eks-data-staging && export VAULT_ADDR=http://vault.k8s-product.vault.staging.internal"
-alias production="ssocred production && export AWS_PROFILE=production && kubectx eks-production && export VAULT_ADDR=http://vault.k8s-product.vault.production.internal"
-alias data-production="ssocred production && export AWS_PROFILE=production && kubectx eks-data-production && export VAULT_ADDR=http://vault.k8s-product.vault.production.internal"
-alias cicd="ssocred cicd && export AWS_PROFILE=cicd && kubectx eks-cicd"
+alias lg='lazygit'
 
-alias ba="bat $DOTFILES/zsh/aliases.zsh" 
+alias ba='bat $DOTFILES/zsh/aliases.zsh' 
 
-alias rc="$DOTFILES/install/bootstrap.sh" 
+alias rc='$DOTFILES/install/bootstrap.sh' 
+
+alias vault='~/myCode/pleo/pleo/bin/vault-rds-credentials.sh'
 
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
@@ -40,7 +38,7 @@ alias gcp='git cherry-pick'
 alias gd='git diff -w'
 alias gds='git diff -w --staged'
 alias grs='git restore --staged'
-alias gst='git rev-parse --git-dir > /dev/null 2>&1 && git status || exa'
+alias gst='git rev-parse --git-dir > /dev/null 2>&1 && git status || lsd'
 alias gu='git reset --soft HEAD~1'
 alias gpr='git remote prune origin'
 alias ff='gpr && git pull --ff-only'
@@ -80,4 +78,12 @@ take() {
 vmrss() {
     p=$1
     while true; do sync; ps -o rss= -p $1 | awk '{print $1/1024 " MB"}'; sleep 1; done
+}
+
+
+addToPath() {
+    if [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$PATH:$1
+    fi
+
 }

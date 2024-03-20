@@ -17,7 +17,7 @@ brew install coreutils
 brew install curl
 brew install git
 
-brew install exa
+brew install lsd
 # brew install z
 brew install zoxide
 brew install ag
@@ -41,3 +41,5 @@ brew install zellij
 brew install alacritty
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+brew install postgresql
