@@ -51,6 +51,10 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #Load Zoxide
 eval "$(zoxide init zsh)"
 
+#Source SDKMAN
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
 # Needs to be loaded toward the end
 source_if_exists ~/.fzf.zsh
 

@@ -32,4 +32,3 @@ set notimeout
 " increase the timeoutlen (default: 1000), don't add space around the equal sign
 set timeoutlen=5000
 
-
