@@ -14,18 +14,17 @@ alias la='lsd -a'
 alias l='lsd -l'
 alias ll='lsd -lar'
 
-# NVIM
-alias v='nvim-lazy'
-
 alias cat='bat'
+
+# NVIM
+alias v="NVIM_APPNAME=LazyVim nvim"
+
 
 alias lg='lazygit'
 
 alias ba='bat $DOTFILES/zsh/aliases.zsh' 
 
 alias rc='$DOTFILES/install/bootstrap.sh' 
-
-alias vault='~/myCode/pleo/pleo/bin/vault-rds-credentials.sh'
 
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
