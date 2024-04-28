@@ -19,7 +19,6 @@ alias cat='bat'
 # NVIM
 alias v="NVIM_APPNAME=LazyVim nvim"
 
-
 alias lg='lazygit'
 
 alias ba='bat $DOTFILES/zsh/aliases.zsh' 
@@ -86,3 +85,16 @@ addToPath() {
     fi
 
 }
+
+
+#Kill Docker Container by exposed Port
+dkill() {
+    container_id=$(docker ps --format "{{.ID}}\t{{.Ports}}" | awk -F'\t' -v port="$1" '$2 ~ "->" port "/tcp" {print $1}')
+     if [ -z "$container_id" ]; then
+        echo "No container found with exposed port $1"
+    else
+        docker kill "$container_id"
+        echo "Container $container_id killed"
+    fi
+}
+
