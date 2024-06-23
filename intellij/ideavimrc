@@ -14,6 +14,9 @@ nmap <leader>ca <action>(ShowIntentionActions)
 nmap gr <action>(FindUsages)
 nmap <leader>r <action>(Run)
 nmap [e <action>(GotoNextError)
+nmap ]e <action>(GotoPreviousError)
+nmap <leader>ff <action>(GotoFile)
+nmap <leader>re <action>(RenameElement)
 
 inoremap jj <Esc>
 

@@ -78,7 +78,9 @@ vmrss() {
     while true; do sync; ps -o rss= -p $1 | awk '{print $1/1024 " MB"}'; sleep 1; done
 }
 
-
+# Usage: addToPath /Users/maximilian.klammer/myCode/migration_scripts
+# Then call the script from anywhere e.g  my_script.sh
+# Somtimes there are issues then just kill and start an new terminal
 addToPath() {
     if [[ "$PATH" != *"$1"* ]]; then
         export PATH=$PATH:$1
