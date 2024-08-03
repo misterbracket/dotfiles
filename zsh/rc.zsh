@@ -8,7 +8,6 @@ source_if_exists $HOME/.env.sh
 source_if_exists $DOTFILES/zsh/history.zsh
 source_if_exists $DOTFILES/zsh/git.zsh
 source_if_exists $DOTFILES/zsh/aliases.zsh
-source_if_exists $DOTFILES/zsh/functions.zsh
 source_if_exists /usr/local/etc/profile.d/z.sh
 source_if_exists /opt/homebrew/etc/profile.d/z.sh
 
@@ -62,12 +61,9 @@ source_if_exists ~/.fzf.zsh
 eval "$(atuin init zsh --disable-up-arrow)"
 
 
-
 ##########################
 # Old Config to clean up #
 ##########################
-
-export PATH=$PATH:/Users/maximilian.klammer/myCode/pleo/terraform/bin
 
 PATH=$(pyenv root)/shims:$PATH 
 if [ -f '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/maximilian.klammer/google-cloud-sdk/path.zsh.inc'; fi
