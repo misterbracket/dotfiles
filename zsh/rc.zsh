@@ -56,6 +56,12 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 # Needs to be loaded toward the end
 source_if_exists ~/.fzf.zsh
 
+#Atuin Better history search
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh --disable-up-arrow)"
+
+
 
 ##########################
 # Old Config to clean up #
@@ -89,3 +95,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/maximilian.klammer/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+

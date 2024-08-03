@@ -17,6 +17,7 @@ nmap [e <action>(GotoNextError)
 nmap ]e <action>(GotoPreviousError)
 nmap <leader>ff <action>(GotoFile)
 nmap <leader>re <action>(RenameElement)
+nmap <leader>ef <action>(ExtractFunction)
 
 inoremap jj <Esc>
 
