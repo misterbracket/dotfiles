@@ -19,7 +19,9 @@ alias cat='bat'
 # NVIM
 alias v="NVIM_APPNAME=LazyVim nvim"
 
-alias lg='lazygit'
+alias lzg='lazygit'
+
+alias lzd='lazydocker'
 
 alias ba='bat $DOTFILES/zsh/aliases.zsh' 
 

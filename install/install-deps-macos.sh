@@ -39,9 +39,13 @@ brew install git-delta
 brew install tmux
 brew install zellij
 brew install alacritty
+brew install wezterm
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 curl --proto '=https' --tlsv1.2 -LsSf https://setup.atuin.sh | sh
 
 brew install postgresql
+
+brew install jesseduffield/lazydocker/lazydocker
+brew install lazydocker
