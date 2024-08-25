@@ -21,7 +21,7 @@ return {
 	window_decorations = "RESIZE",
 	keys = {
 		{
-			key = "f",
+			key = "g",
 			mods = "CMD",
 			action = wezterm.action.ToggleFullScreen,
 		},
@@ -44,6 +44,16 @@ return {
 			key = "'",
 			mods = "CTRL",
 			action = wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+		},
+		{
+			key = "t",
+			mods = "CTRL",
+			action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
+		},
+		{
+			key = "f",
+			mods = "CMD",
+			action = wezterm.action.Search("CurrentSelectionOrEmptyString"),
 		},
 	},
 	mouse_bindings = {
