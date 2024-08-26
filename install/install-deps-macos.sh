@@ -36,6 +36,8 @@ brew install neovim
 brew install lazygit
 brew install git-delta
 
+brew install --cask nikitabobko/tap/aerospace
+
 brew install tmux
 brew install zellij
 brew install alacritty
