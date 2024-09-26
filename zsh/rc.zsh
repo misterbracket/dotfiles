@@ -92,3 +92,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/Users/maximilian.klammer/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
+export PATH=$PATH:$HOME/.maestro/bin

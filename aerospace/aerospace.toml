@@ -113,9 +113,10 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-b = 'workspace B'
 alt-i = 'workspace I'
-alt-s = 'workspace S'
-alt-w = 'workspace W'
+alt-c = 'workspace C'
 alt-t = 'workspace T'
+alt-v = 'workspace V'
+alt-w = 'workspace W'
 alt-z = 'workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
@@ -130,9 +131,10 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B' # Browser
 alt-shift-i = 'move-node-to-workspace I' # Intellij
-alt-shift-s = 'move-node-to-workspace S' # Slack
-alt-shift-w = 'move-node-to-workspace W' # WhatsApp
+alt-shift-c = 'move-node-to-workspace C' # Chat - Slack
 alt-shift-t = 'move-node-to-workspace T' # Terminal
+alt-shift-v = 'move-node-to-workspace V' # VSCode
+alt-shift-w = 'move-node-to-workspace W' # WhatsApp
 alt-shift-z = 'move-node-to-workspace Z' # Zoom
 
 alt-shift-f = 'fullscreen'
@@ -193,7 +195,11 @@ run = "move-node-to-workspace I"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run = "move-node-to-workspace S"
+run = "move-node-to-workspace C"
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = "move-node-to-workspace V"
 
 [[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
