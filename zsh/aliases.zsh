@@ -107,6 +107,11 @@ function tmux-sessionizer() {
   $DOTFILES/sessionizer/session.sh
 }
 
+function dlq-reader()
+{
+  $DOTFILES/scripts/dlq-reader.sh $1  
+}
+
 bindkey -s ^f "tmux-sessionizer\n"
 
 
