@@ -69,6 +69,10 @@ alias gprev='git checkout HEAD^'
 
 # FUNCTIONS -------------------------------------------------------------------
 
+token() {
+  http GET http://127.0.0.1:3032/admin | jq .accessToken | tee /dev/tty | pbcopy
+}
+
 take() {
   mkdir -p $1
   cd $1
