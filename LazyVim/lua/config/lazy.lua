@@ -22,8 +22,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.docker" },
     { import = "lazyvim.plugins.extras.lang.terraform" },
 
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-
     { import = "lazyvim.plugins.extras.util.project" },
 
     -- import/override with your plugins
