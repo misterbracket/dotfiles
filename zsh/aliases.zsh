@@ -9,7 +9,6 @@ alias zel='zellij'
 alias zela='zellij a'
 
 # Directory Navigation
-# alias ..='cd ..'
 alias la='lsd -a'
 alias l='lsd -l'
 alias ll='lsd -lar'
@@ -26,6 +25,9 @@ alias lzd='lazydocker'
 alias ba='bat $DOTFILES/zsh/aliases.zsh' 
 
 alias rc='$DOTFILES/install/bootstrap.sh' 
+
+#Intellij
+alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
 
 # GIT ALIASES -----------------------------------------------------------------
 alias gc='git commit'
@@ -69,8 +71,8 @@ alias gprev='git checkout HEAD^'
 
 # FUNCTIONS -------------------------------------------------------------------
 
-token() {
-  http GET http://127.0.0.1:3032/admin | jq .accessToken | tee /dev/tty | pbcopy
+token() { 
+  http GET http://127.0.0.1:3032/admin | jq -r .accessToken | tee /dev/tty | pbcopy | export my_token=$(pbpaste)
 }
 
 take() {

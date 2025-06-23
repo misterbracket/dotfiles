@@ -18,7 +18,6 @@ brew install curl
 brew install git
 
 brew install lsd
-# brew install z
 brew install zoxide
 brew install ag
 brew install sd   # sed replacement
