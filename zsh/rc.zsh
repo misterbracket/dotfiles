@@ -54,6 +54,7 @@ source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Needs to be loaded toward the end
 source_if_exists ~/.fzf.zsh
+source <(fzf --zsh)
 
 #Atuin Better history search
 . "$HOME/.atuin/bin/env"
@@ -99,3 +100,6 @@ if [ -f '/Users/maximilian.klammer/Desktop/google-cloud-sdk/path.zsh.inc' ]; the
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/maximilian.klammer/Desktop/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/maximilian.klammer/Desktop/google-cloud-sdk/completion.zsh.inc'; fi
+
+# export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense,http,kubectl,curl,grep,aws,jq' # optional
+# source <(carapace _carapace)
