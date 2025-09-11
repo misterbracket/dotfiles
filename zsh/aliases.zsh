@@ -15,6 +15,8 @@ alias ll='lsd -lar'
 
 alias cat='bat'
 
+alias top='btop'
+
 # NVIM
 alias v="NVIM_APPNAME=LazyVim nvim"
 

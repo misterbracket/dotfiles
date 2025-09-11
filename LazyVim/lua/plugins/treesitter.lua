@@ -17,6 +17,8 @@ return {
       "typescript",
       "vim",
       "yaml",
+      "terraform",
+      "hcl",
     },
   },
 }
