@@ -114,6 +114,7 @@ alt-9 = 'workspace 9'
 alt-b = 'workspace B'
 alt-i = 'workspace I'
 alt-c = 'workspace C'
+alt-d = 'workspace D'
 alt-t = 'workspace T'
 alt-v = 'workspace V'
 alt-w = 'workspace W'
@@ -130,6 +131,7 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B' # Browser
+alt-shift-d = 'move-node-to-workspace D' # DataGrip
 alt-shift-i = 'move-node-to-workspace I' # Intellij
 alt-shift-c = 'move-node-to-workspace C' # Chat - Slack
 alt-shift-t = 'move-node-to-workspace T' # Terminal
@@ -192,6 +194,10 @@ run = "move-node-to-workspace B"
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.intellij'
 run = "move-node-to-workspace I"
+
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.datagrip'
+run = "move-node-to-workspace D"
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
