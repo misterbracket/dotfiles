@@ -1,3 +1,10 @@
+
+# Define the order and format of the modules in your prompt
+format = """
+$username$hostname$shell$shlvl$directory$hg_branch$hg_status$pijul_branch$pijul_status$fossil_branch$fossil_status${custom.jj}$all$env_var$custom$line_break$character
+"""
+
+
 [battery]
 full_symbol = "• "
 charging_symbol = "⇡ "
@@ -20,10 +27,10 @@ read_only = " "
 truncation_length = 4
 truncate_to_repo = false
 
-# [custom.jj]
-# command = "prompt"
-# format = "$output"
-# ignore_timeout = true
-# shell = ["starship-jj", "--ignore-working-copy", "starship"]
-# use_stdin = false
-# when = true
+[custom.jj]
+command = "prompt"
+format = "$output"
+ignore_timeout = true
+shell = ["starship-jj", "--ignore-working-copy", "starship"]
+use_stdin = false
+when = true
