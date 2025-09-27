@@ -11,3 +11,7 @@ Thumbs.db
 # ASDF generated files #
 ######################
 .tool-versions
+######################
+# JJ 
+######################
+.jj
