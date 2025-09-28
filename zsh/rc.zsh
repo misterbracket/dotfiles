@@ -61,6 +61,8 @@ source <(fzf --zsh)
 
 eval "$(atuin init zsh --disable-up-arrow)"
 
+#JJ Autocompletions
+source <(COMPLETE=zsh jj)
 
 ##########################
 # Old Config to clean up #

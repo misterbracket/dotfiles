@@ -5,5 +5,54 @@ name = "Max Klammer"
 email = "maximilian.klammer@pleo.io"
 
 [ui]
-default-command = "log"
 editor = "nvim"
+default-command = 'log'
+
+# Taken from https://zerowidth.com/2025/jj-tips-and-tricks/#bookmarks-and-branches
+# Once you’re happy with a series of changes on top of a bookmark, jj tug moves the nearest bookmark up to @-. 
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+
+[git]
+# This means you don’t need to specify --allow-new when pushing a new bookmark.
+push-new-bookmarks = true
+
+[template-aliases]
+'format_short_change_id(id)' = 'id.shortest()'
+
+[revsets]
+log = '@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()'
+
+[aliases]
+tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+# Opens a PR page
+pr = [
+  "util",
+  "exec",
+  "--",
+  "bash",
+  "-c",
+  """
+set -euo pipefail
+
+# Find the closest bookmark to the current commit
+BOOKMARK=$(jj log -r "closest_bookmark(@)" --template 'bookmarks' --no-graph | tr -d '[:space:]')
+
+if [ -z "$BOOKMARK" ]; then
+  echo "No bookmark found on the current commit." >&2
+  exit 1
+fi
+
+# NOTE: Removed the 'no bookmark found' check. If no bookmark exists,
+# the GitHub compare URL may be invalid.
+
+# Extract org/repo from remote URL
+URL=$(git config remote.origin.url)
+# Handles both SSH (git@github.com:org/repo.git) and HTTPS (https://github.com/org/repo.git)
+ORG_REPO=$(echo "$URL" | sed -E 's#git@github.com:##; s#https://github.com/##; s/\\.git$//')
+
+# Open the GitHub compare page for the bookmark
+open "https://github.com/${ORG_REPO}/compare/${BOOKMARK}?expand=1"
+""",
+  "",
+]

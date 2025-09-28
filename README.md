@@ -12,10 +12,6 @@ cd <this-repo>
 ./install/bootstrap.sh
 ```
 
-## To Do
-
-- [ ] Explore Git Submodules
-
 ## Local ZSH Config
 
 If there's customization you want ZSH to load on startup that is specific to
