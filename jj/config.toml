@@ -24,7 +24,8 @@ push-new-bookmarks = true
 log = '@ | ancestors(trunk()..(visible_heads() & mine()), 2) | trunk()'
 
 [aliases]
-tug = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+tug = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@"]
+tug- = ["bookmark", "move", "--from", "heads(::@- & bookmarks())", "--to", "@-"]
 mine = ["bookmark", "list", "-r", "mine()"]
 # Opens a PR page
 pr = [
