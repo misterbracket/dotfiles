@@ -13,6 +13,9 @@ source_if_exists /opt/homebrew/etc/profile.d/z.sh
 
 . "$HOME/.asdf/asdf.sh"
 
+#When Using GO with ASDF this must be present
+. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+
 if type "direnv" > /dev/null; then
     eval "$(direnv hook zsh)"
 fi
@@ -34,7 +37,6 @@ precmd() {
 export VISUAL=nvim
 export EDITOR=nvim
 export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scripts/"
-
 
 # Load Starship
 eval "$(starship init zsh)"
