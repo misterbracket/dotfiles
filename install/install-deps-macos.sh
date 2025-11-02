@@ -20,13 +20,14 @@ brew install git
 brew install lsd
 brew install zoxide
 brew install ag
-brew install sd   # sed replacement
-brew install fd   # find replacement
-brew install dust # du replacement
-brew install dog  # dig replacement
-brew install xh   # curl replacement
-brew install ncdu # du replacement
-brew install duf  # df replacement
+brew install sd      # sed replacement
+brew install ripgrep # grep replacement
+brew install fd      # find replacement
+brew install dust    # du replacement
+brew install dog     # dig replacement
+brew install xh      # curl replacement
+brew install ncdu    # du replacement
+brew install duf     # df replacement
 brew install parallel
 brew install btop # top replacement
 
