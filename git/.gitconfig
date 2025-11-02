@@ -32,3 +32,8 @@
 	lol = log --format='* %C(yellow) %h %Creset %<(22)%an %<(12)%cd %<(80,trunc)%s %GK' --date=format:'%y-%m-%d %H:%M' --reverse --perl-regexp --author='^((?!(pleo-bot|github-actions|pleo-file-distributor)).*)$' -15
 [pull]
 	rebase = true
+
+# Used for Stacked PRs
+# Checkout guide with lazygit here  https://www.youtube.com/watch?v=M6S-9Y8peDY
+[rebase]
+	updateRefs = true
