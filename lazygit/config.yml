@@ -1,4 +1,14 @@
 git:
-  paging:
-    colorArg: always
-    pager: delta --dark --paging=never
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never
+
+customCommands:
+  - key: "E"
+    description: "Add empty commit"
+    context: "commits"
+    prompts:
+      - type: "input"
+        title: "Commit Message"
+    command: "git commit --allow-empty -m {{index .PromptResponses 0}}"
+    loadingText: "Committing empty commit..."
