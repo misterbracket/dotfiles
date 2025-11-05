@@ -1,5 +1,5 @@
 theme = Catppuccin Mocha
-font-size = 19
+font-size = 16
 background-blur-radius = 20
 mouse-hide-while-typing = true
 window-decoration = true
@@ -11,3 +11,14 @@ confirm-close-surface = false
 # Claude Shift + Enter
 keybind = shift+enter=text:\x1b\r
 
+# Custom Mac keybind for Tmux and VIM 
+# https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux/
+
+# Cmd + T -> tmux: new window (\x02c)
+keybind = cmd+t=text:\x02c
+
+# Cmd + W -> tmux: kill pane (\x02x)
+keybind = cmd+w=text:\x02x
+
+# Cmd + S -> save vim buffer (\x1b:w\n)
+keybind = super+s=text:\x1b\x3a\x77\x0a
