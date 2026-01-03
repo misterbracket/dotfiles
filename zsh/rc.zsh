@@ -20,7 +20,38 @@ if type "direnv" > /dev/null; then
     eval "$(direnv hook zsh)"
 fi
 
+#Open Buffer line in Editor
+#Press Control+x, Control+e
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+
+# Enable Vim Style Command Editing
+bindkey -v
+
+# # Show Mode in Termial when using Vim Style Command Editing
+# export KEYTIMEOUT=1
+# function zle-line-init zle-keymap-select {
+#     # Define colors
+#     local ins="%F{green}INSERT%f"
+#     local cmd="%F{red}NORMAL%f"
+#     local vis="%F{magenta}VISUAL%f"
+#
+#     # Check keymap and assign to Right Prompt
+#     case $KEYMAP in
+#         vicmd)      RPS1=$cmd ;;
+#         viins|main) RPS1=$ins ;;
+#         vivis)      RPS1=$vis ;;
+#     esac
+#
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+
+#Enable zmv for moving files
 autoload -U zmv
+
 autoload -U promptinit && promptinit
 autoload -U colors && colors
 autoload -Uz compinit && compinit

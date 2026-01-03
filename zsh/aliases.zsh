@@ -4,10 +4,6 @@
 alias ta='tmux attach -t'
 alias tn='tmux new'
 
-# Zellij
-alias zel='zellij'
-alias zela='zellij a'
-
 # Directory Navigation
 alias la='lsd -a'
 alias l='lsd -l'
@@ -17,11 +13,9 @@ alias cat='bat'
 
 alias top='btop'
 
-# NVIM
-alias v="NVIM_APPNAME=LazyVim nvim"
+alias v='nvim'
 
 alias lzg='lazygit'
-
 alias lzd='lazydocker'
 
 alias ba='bat $DOTFILES/zsh/aliases.zsh' 
