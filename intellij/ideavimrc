@@ -18,6 +18,8 @@ nmap ]e <action>(GotoPreviousError)
 nmap <leader>ff <action>(GotoFile)
 nmap <leader>re <action>(RenameElement)
 nmap <leader>ef <action>(ExtractFunction)
+nmap gi <action>(GotoImplementation)
+nmap gs <action>(GotoSuperMethod)
 
 inoremap jj <Esc>
 
