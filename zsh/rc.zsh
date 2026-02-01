@@ -118,3 +118,6 @@ if [ -f '/Users/maximilian.klammer/Desktop/google-cloud-sdk/completion.zsh.inc' 
 
 # export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense,http,kubectl,curl,grep,aws,jq' # optional
 # source <(carapace _carapace)
+#
+fpath=(~/.stripe $fpath)
+autoload -Uz compinit && compinit -i
