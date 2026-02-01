@@ -1,6 +1,7 @@
 **.DS_Store
 **.netrwhist
 *.swp
+.idea/
 job-specific.sh
 bin/format-transactions.js
 run-pleo-moon

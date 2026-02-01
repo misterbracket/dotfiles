@@ -1,8 +1,5 @@
 #!/bin/zsh
 
-# AstroNvim 
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
-
 #Powerlevel10k
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
@@ -10,7 +7,7 @@ git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
 source $HOME/.asdf/asdf.sh
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-NODEJS_CHECK_SIGNATURES=no asdf install nodejs 16.17.0
+NODEJS_CHECK_SIGNATURES=no asdf install nodejs latest
 asdf global nodejs $(asdf list nodejs | tail -1 | sed 's/^ *//g')
 
 #Git Branch Utils
@@ -23,4 +20,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-au
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 #TPM
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/t
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
