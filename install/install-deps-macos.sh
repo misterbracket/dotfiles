@@ -12,10 +12,11 @@ brew install jq
 brew install bat
 brew install starship
 
-#used by asdf
 brew install coreutils
 brew install curl
 brew install git
+
+brew install mise
 
 brew install lsd
 brew install zoxide

@@ -20,11 +20,8 @@ export PATH="$PATH:/usr/local/sbin:$DOTFILES/bin:$HOME/.local/bin:$DOTFILES/scri
 # Version Managers & Package Managers
 ################################################################################
 
-# asdf
-. "$HOME/.asdf/asdf.sh"
-
-# Go with ASDF
-. ${ASDF_DATA_DIR:-$HOME/.asdf}/plugins/golang/set-env.zsh
+# mise
+eval "$(mise activate zsh)"
 
 # direnv
 if type "direnv" > /dev/null; then
