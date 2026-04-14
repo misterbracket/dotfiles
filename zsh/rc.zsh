@@ -28,9 +28,6 @@ if type "direnv" > /dev/null; then
     eval "$(direnv hook zsh)"
 fi
 
-# SDKMAN
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -72,15 +69,10 @@ precmd() {
 ################################################################################
 
 # ZSH Syntax Highlighting
-if test -z ${ZSH_HIGHLIGHT_DIR+x}; then
-else
-    source $ZSH_HIGHLIGHT_DIR/zsh-syntax-highlighting.zsh
-fi
-
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ZSH Autosuggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ################################################################################
 # CLI Tools
@@ -101,7 +93,7 @@ source <(fzf --zsh)
 eval "$(atuin init zsh --disable-up-arrow)"
 
 # jj (Jujutsu VCS) autocompletions
-source <(COMPLETE=zsh jj)
+# source <(COMPLETE=zsh jj)
 
 ################################################################################
 # Source Additional Configs
@@ -120,3 +112,4 @@ source_if_exists /opt/homebrew/etc/profile.d/z.sh
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/maximilian.klammer/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+

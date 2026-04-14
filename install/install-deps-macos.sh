@@ -4,6 +4,7 @@ brew install fzf
 $(brew --prefix)/opt/fzf/install --bin
 
 brew install zsh-syntax-highlighting
+brew install zsh-autosuggestions
 brew install firefox
 brew install docker
 brew install docker-compose
