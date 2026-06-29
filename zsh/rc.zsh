@@ -113,3 +113,23 @@ source_if_exists /opt/homebrew/etc/profile.d/z.sh
 export PATH="/Users/maximilian.klammer/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
+# bun completions
+[ -s "/Users/maximilian.klammer/.bun/_bun" ] && source "/Users/maximilian.klammer/.bun/_bun"
+export PATH=$PATH:$HOME/.maestro/bin
+export PATH=$PATH:$HOME/.maestro/bin
+
+# pnpm
+export PNPM_HOME="/Users/maximilian.klammer/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/maximilian.klammer/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# opencode
+export PATH=/Users/maximilian.klammer/.opencode/bin:$PATH

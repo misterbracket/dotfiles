@@ -12,6 +12,7 @@ brew install tree
 brew install jq
 brew install bat
 brew install starship
+brew install k9s
 
 brew install coreutils
 brew install curl
@@ -52,3 +53,10 @@ brew install postgresql
 
 brew install jesseduffield/lazydocker/lazydocker
 brew install lazydocker
+
+brew install gh
+brew install gh-dash
+brew install dlvhdr/formulae/diffnav
+
+brew install schpet/tap/linear
+brew install terminal-notifier
