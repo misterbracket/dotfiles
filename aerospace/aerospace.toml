@@ -114,9 +114,11 @@ alt-9 = 'workspace 9'
 alt-b = 'workspace B'
 alt-i = 'workspace I'
 alt-c = 'workspace C'
+ctrl-alt-h = 'workspace H'
 alt-d = 'workspace D'
 alt-m = 'workspace M'
 alt-n = 'workspace N'
+alt-o = 'workspace O'
 alt-p = 'workspace P'
 alt-t = 'workspace T'
 alt-v = 'workspace V'
@@ -136,9 +138,11 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B' # Browser
 alt-shift-c = 'move-node-to-workspace C' # Chat - Slack
 alt-shift-d = 'move-node-to-workspace D' # DataGrip
+ctrl-alt-shift-h = 'move-node-to-workspace H' # Herdr
 alt-shift-i = 'move-node-to-workspace I' # Intellij
 alt-shift-m = 'move-node-to-workspace M' # Meet
 alt-shift-n = 'move-node-to-workspace N' # Notion
+alt-shift-o = 'move-node-to-workspace O' # Obsidian
 alt-shift-p = 'move-node-to-workspace P' # Postman
 alt-shift-t = 'move-node-to-workspace T' # Terminal
 alt-shift-v = 'move-node-to-workspace V' # VSCode
@@ -218,6 +222,14 @@ if.app-id = 'notion.id'
 run = "move-node-to-workspace N"
 
 [[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = "move-node-to-workspace O"
+
+[[on-window-detected]]
+if.app-id = 'com.postmanlabs.mac'
+run = "move-node-to-workspace P"
+
+[[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = "move-node-to-workspace V"
 
@@ -230,5 +242,5 @@ if.app-id = 'us.zoom.xos'
 run = "move-node-to-workspace Z"
 
 [[on-window-detected]]
-if.app-id = 'com.postmanlabs.mac'
-run = "move-node-to-workspace P"
+if.app-id = 'dev.herdr.app'
+run = "move-node-to-workspace H"

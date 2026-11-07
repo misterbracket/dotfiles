@@ -37,3 +37,9 @@
 # Checkout guide with lazygit here  https://www.youtube.com/watch?v=M6S-9Y8peDY
 [rebase]
 	updateRefs = true
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

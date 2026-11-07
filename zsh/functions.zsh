@@ -40,3 +40,10 @@ dkill() {
 function tmux-sessionizer() {
   $DOTFILES/sessionizer/session.sh
 }
+
+# Copy absolute path of a file/dir to clipboard
+# Usage: copypath ./somefile
+copypath() {
+  realpath "$1" | tr -d '\n' | pbcopy
+  echo "Copied: $(realpath "$1")"
+}

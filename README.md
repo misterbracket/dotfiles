@@ -8,7 +8,7 @@ Personal macOS development environment configs using modular tool-specific direc
 
 - **Shell**: zsh + starship prompt + atuin history + fzf
 - **Editors**: LazyVim (Neovim), IntelliJ ideavimrc
-- **Terminal**: ghostty + tmux
+- **Terminal**: ghostty + tmux + herdr
 - **Git**: lazygit, git-delta, jujutsu (jj)
 - **Window Manager**: AeroSpace (macOS tiling)
 - **Tools**: asdf, zoxide, ripgrep, fd, bat, btop, lazydocker

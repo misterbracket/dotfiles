@@ -133,3 +133,8 @@ export PATH="$PATH:/Users/maximilian.klammer/.lmstudio/bin"
 
 # opencode
 export PATH=/Users/maximilian.klammer/.opencode/bin:$PATH
+export HOMEBREW_GITHUB_API_TOKEN="$(gh auth token)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
