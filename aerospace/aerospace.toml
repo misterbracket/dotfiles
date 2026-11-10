@@ -138,7 +138,6 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-b = 'move-node-to-workspace B' # Browser
 alt-shift-c = 'move-node-to-workspace C' # Chat - Slack
 alt-shift-d = 'move-node-to-workspace D' # DataGrip
-ctrl-alt-shift-h = 'move-node-to-workspace H' # Herdr
 alt-shift-i = 'move-node-to-workspace I' # Intellij
 alt-shift-m = 'move-node-to-workspace M' # Meet
 alt-shift-n = 'move-node-to-workspace N' # Notion
@@ -193,8 +192,12 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# run = "move-node-to-workspace T"
+
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
+if.app-id = 'dev.herdr.app'
 run = "move-node-to-workspace T"
 
 [[on-window-detected]]
@@ -240,7 +243,3 @@ run = "move-node-to-workspace W"
 [[on-window-detected]]
 if.app-id = 'us.zoom.xos'
 run = "move-node-to-workspace Z"
-
-[[on-window-detected]]
-if.app-id = 'dev.herdr.app'
-run = "move-node-to-workspace H"
