@@ -2,7 +2,7 @@
 // 只讀快取檔、不跑指令、不連網、不讀對話紀錄與憑證，沒有數字就不畫數字。
 import { View, div, image, svg } from "gpui-kit";
 import { h_flex, v_flex } from "gpui-base";
-import { agents, appHome, readTextFile, run, setAgentOrder, spaces, theme, watchFolder } from "herdr";
+import { agents, appHome, readTextFile, run, setAgentOrder, shared, spaces, theme, watchFolder } from "herdr";
 import { appLabel, assignJobs, cachePath, gauge, jobIn, modelText, parseCache, portraitPath, remoteCachePath, spritePath, tabNames } from "./lib.js";
 
 const HOME = appHome();
@@ -193,7 +193,10 @@ export default class Traveler extends View {
     const hp = gauge(cache ? cache.hp : null, cache ? cache.updatedAt : null, now);
     const sp = gauge(cache ? cache.sp : null, cache ? cache.updatedAt : null, now);
     // blocked 一眼看得出來：框線與狀態文字都用 t.blocked，蓋過 focused 的 t.accent。
-    const frame = a.status === "blocked" ? t.blocked : a.focused ? t.accent : t.border;
+    // Agents of the selected space: accent frame, full opacity. Others dimmed. Left stripe = space color.
+    const mine = a.space === spaces().find((s) => s.active)?.id;
+    const frame = a.status === "blocked" ? t.blocked : mine ? t.accent : t.border;
+    const stripe = t[(shared("space.colors") ?? {})[a.space]] ?? t.border;
     const statusColor = a.status === "blocked" ? t.blocked : t[a.status] ?? t.dim;
     const label = appLabel(a.app);
     const model = modelText(cache?.model, cache?.effort);
@@ -204,9 +207,13 @@ export default class Traveler extends View {
     const subline = [a.space_name, session !== headline ? session : null].filter(Boolean).join(" · ");
     return h_flex()
       .id(`traveler-${a.address}`)
+      .relative()
       .w_full()
       .flex_none()
       .p(8)
+      .pl(12)
+      .when(!mine && a.status !== "blocked", (el) => el.opacity(0.55))
+      .child(div().absolute().left(0).top(0).bottom(0).w(4).bg(stripe))
       .gap(10)
       .items_center()
       .bg(`${t.surface}c8`)
